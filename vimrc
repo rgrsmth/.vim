@@ -20,6 +20,7 @@ Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomasr/molokai'
 Plug 'mhinz/vim-startify'
+Plug 'jbmorgado/vim-pine-script'
 call plug#end()
 
 syntax enable
@@ -53,4 +54,12 @@ set hlsearch
 " key bindings
 let mapleader=","
 
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
